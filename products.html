@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Logo Styling */
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(45deg, #000000, rgb(110, 107, 107));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo span {
+      color: #27ae60;
+    }
+
+    /* Logo Animation */
+    .logo::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    /* Nav Links */
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: rgb(7, 7, 7)f;
+    }
+
+    /* Icons */
+    .icons a {
+      margin-left: 20px;
+      font-size: 18px;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    /* Icon Hover Animation */
+    .icons a:hover {
+      color: #ccf0daff;
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .icons {
+        display: none; /* mobile pe icons hide */
+      }
+
+      .nav-links.active {
+        display: block;
+      }
+    }
+
+
+     
+        
+    .contact-hero {
+background: url('image/Lucid_Origin_A_clean_modern_living_room_interior_with_a_minima_2.jpg') center center / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+.contact-hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+.contact-hero p {
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+  <!-- Navbar -->
+  <header class="navbar">
+    
+    <a class="abc" href="index.html"><div class="logo">LAM<span>PI</span></div></a>
+
+    <!-- Menu Links -->
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Icons -->
+    <div class="icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-heart"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+ <section class="contact-hero">
+    <h1>PRODUCTS</h1>
+    <p>Home / Products</p>
+</section>
+    
+<section class="trending-products">
+  <div class="container">
+    <p class="subheading">Tenor Brand's</p>
+    <h2 class="section-title">TRENDING PRODUCTS</h2>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop01.webp" alt="Buffet Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Buffet Lamp</h3></a>
+        <p class="price">Rs. 810.00</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop02.webp" alt="Arc Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Arc Lamp</h3></a>
+        <p class="price">Rs. 570.00</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop03.webp" alt="Tripod Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title" style="color:var(--accent)">Tripod Lamp</h3></a>
+        <p class="price">Rs. 670.00</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop04.webp" alt="Swing Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Swing Lamp</h3></a>
+        <p class="price">Rs. 520.00</p>
+      </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop05.webp" alt="Buffet Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Piano Lamp</h3></a>
+        <p class="price">Rs. 850.00</p>
+      </div>
+
+        <!-- Product 6 -->
+            <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop06.webp" alt="Buffet Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Gooseneck Lamp</h3></a>
+        <p class="price">Rs. 970.00</p>
+      </div>
+
+       <!-- Product 7 -->
+            <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop07.webp" alt="Buffet Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Boom Lamp</h3></a>
+        <p class="price">Rs. 760.00</p>
+      </div>
+
+       <!-- Product 8 -->
+            <div class="product-card">
+        <div class="product-image">
+          <img src="../image/shop08.webp" alt="Buffet Lamp">
+          <div class="overlay-icons" aria-hidden="true">
+            <button class="icon-btn" title="Add to cart"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" title="Quick view"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <a href="#" class="title-link"><h3 class="product-title">Floor Lamp</h3></a>
+        <p class="price">Rs. 920.00</p>
+      </div>
+
+    </div> <!-- product-grid -->
+  </div>
+</section>
+
+      
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>ADDRESS</h4>
+      <p>📍 No: 58 A, laxmi Nagar,<br>New Delhi, Delhi, India </p>
+      <p>📞 0000 - 123 - 456789</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li><a href="#">Help & Contact Us</a></li>
+        <li><a href="#">Return & Refunds</a></li>
+        <li><a href="#">Online Stores</a></li>
+        <li><a href="#">Terms & Condition</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>HELP</h4>
+      <ul>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Deliveries</a></li>
+        <li><a href="#">Faq Page</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>NEWSLETTER</h4>
+      <p>Be the first who learns about our great promotions!</p>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">→</button>
+      </form>
+      <!-- <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="mastercard.png" alt="MasterCard">
+        <img src="amex.png" alt="Amex">
+        <img src="paypal.png" alt="PayPal">
+        <img src="discover.png" alt="Discover">
+      </div> -->
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="#">Term & Conditions</a>
+      <a href="#">Policy</a>
+      <a href="#">Map</a>
+    </div>
+
+    <div class="footer-logo">Lampi</div>
+
+    <div class="footer-social">
+      <span>Follow Us On Social</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 Lumos Decor Design themes by Arish Azmi</p>
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
