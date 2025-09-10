@@ -401,7 +401,37 @@ background: url('image/Lucid_Origin_A_clean_modern_living_room_interior_with_a_m
 </footer>
 
 
-<script src="script.js"></script>
+  <!-- Optional small JS for reveal animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting) e.target.classList.add('in-view');
+        });
+      }, {threshold: 0.15});
+
+      document.querySelectorAll('.feature, .team-card, .hero-gallery img').forEach(el=>{
+        obs.observe(el);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  console.log("JS Loaded Successfully!");
+  
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
+if (window.innerWidth <= 480) {
+  if (mySlider) {
+    mySlider.destroy(); // ✅ stop slider on mobile
+  }
+}
+
+  </script>
 
 </body>
 </html>

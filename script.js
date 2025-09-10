@@ -104,10 +104,11 @@
     navLinks.classList.toggle("active");
   });
 });
-// if (window.innerWidth <= 480) {
-//   if (mySlider) {
-//     mySlider.destroy(); // ✅ stop slider on mobile
-//   }
-// }
+if (window.innerWidth <= 480) {
+  if (mySlider) {
+    mySlider.destroy(); // ✅ stop slider on mobile
+  }
+}
+
 
 

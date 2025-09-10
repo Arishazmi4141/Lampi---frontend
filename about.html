@@ -435,25 +435,25 @@ body{font-family: "Segoe UI", Roboto, Arial, sans-serif; color:var(--text); marg
       });
     });
 
-//     document.addEventListener("DOMContentLoaded", () => {
-//   console.log("JS Loaded Successfully!");
+    document.addEventListener("DOMContentLoaded", () => {
+  console.log("JS Loaded Successfully!");
   
-//   const menuToggle = document.getElementById("menu-toggle");
-//   const navLinks = document.getElementById("nav-links");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-//   menuToggle.addEventListener("click", () => {
-//     navLinks.classList.toggle("active");
-//   });
-// });
-// if (window.innerWidth <= 480) {
-//   if (mySlider) {
-//     mySlider.destroy(); // ✅ stop slider on mobile
-//   }
-// }
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
+if (window.innerWidth <= 480) {
+  if (mySlider) {
+    mySlider.destroy(); // ✅ stop slider on mobile
+  }
+}
 
   </script>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 
 </body>
 </html>
